@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color:#d4e5ec; 
+            color: white;
+            line-height: 1.6;
+
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-container {
+            display: flex; /* Use flexbox to arrange images side by side */
+            justify-content: center; /* Center the images */
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .img-box {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            margin: 0 10px; /* Add margin between images */
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .img-box:hover img {
+            transform: scale(1.03);
+        }
+
+        .info-section {
+            background-color:#0a4f70;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 500%;
+            max-width: 1000px;
+            margin: right 40px; ;
+        }
+
+        .info-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background-color:  #ff8c00;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .info-section h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #8b4513;
+        }
+
+        .info-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: white;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        .info-section a{
+            display: flex;
+            justify-content: center; 
+            margin-top: 10px; 
+             margin: 0; 
+              background-color:#e07b00 ; 
+            color: white;
+            padding: 12px 14px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+          
+        }
+
+        @media (max-width: 768px) {
+            .img-box {
+                height: 300px;
+            }
+            
+            .info-section {
+                padding: 30px 20px;
+            }
+            
+            .info-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .img-box {
+                height: 250px;
+            }
+            
+            .info-section h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <div class="img-box">
+                <img src="../try/school/history.jpg" alt="Historical Image"/>
+            </div>
+            <div class="img-box">
+                <img src="../try/school/history2.jpeg" alt="Another Historical Image"/>
+            </div>
+        </div>
+        <div class="info-section">
+            <h1>Our History</h1>
+            <p>
+                “मेरूलिंग डोंगराच्या कुशीत वसलेलं, निसर्गरम्य वातावरणात नटलेलं एक टुमदार गाव – धावडशी! इथंच आपल्याला स्वागत करतं एक गौरवशाली प्रवेशद्वार – झाशीच्या राणीच्या शौर्यगाथेची साक्ष देणारं!
+
+हीच ती पवित्र भूमी, जिथे ब्रह्मेंद्रस्वामींच्या पावन चरणस्पर्शाने तीर्थ झालेलं धावडशी गाव आहे.
+इथेच, १९८३ साली, कै. डॉ. विठ्ठलराव पेंढारकर, कै. जगन्नाथ ज्ञानू पवार, कै. बापूसाहेब साखरे, कै. बाळकृष्ण जोती पवार (पाटील), आणि श्री. रामचंद्र पवार यांच्या पुढाकाराने – श्री ब्रह्मेंद्र स्वामी सेवा मंडळाच्या माध्यमातून सुरू झालं – श्री ब्रह्मेंद्र स्वामी हायस्कूल!
+
+केवळ दोन कौलारू खोल्यांपासून सुरू झालेली ही शाळा, आज दोन भव्य RCC इमारतींमध्ये उभी आहे – जिथे सध्या २५० पेक्षा अधिक विद्यार्थी शिक्षण घेत आहेत – तेही १००% अनुदानित आणि सेमी इंग्रजी माध्यमातून.
+
+प्रत्येक वर्गात Smart E-Boards, E-Learning, आणि Navneet Top Class Software चा वापर –शिक्षण अधिक समजूतदार, डिजिटल आणि आकर्षक बनवतं.
+
+शाळेत आहे अनुभवी व उच्चशिक्षित शिक्षकवर्ग,
+आधुनिक ICT Lab, Internet आणि Spoken English प्रशिक्षणाची सुविधा.
+समृद्ध ग्रंथालय, योग अभ्यास, आणि कबड्डी, खो-खो, लाठी-काठी यांसारख्या देशी खेळांसाठी उत्तम व्यवस्था.
+
+विशेष म्हणजे, Led Hand India या नामांकित संस्थेमार्फत विद्यार्थ्यांना व्यावसायिक शिक्षणाचे प्रशिक्षण देखील दिलं जातं –जे त्यांना भविष्यातील उद्योग, नोकरी आणि स्वयंरोजगारासाठी सक्षम बनवतं.
+
+संपूर्ण शाळा सौर ऊर्जेवर चालते – ग्रीन स्कूलकडे एक प्रेरणादायी पाऊल.
+RO पाण्याची व्यवस्था, स्वच्छ व स्वतंत्र स्वच्छतागृहे – मुला-मुलींसाठी.
+विशेष म्हणजे – परगावातील विद्यार्थ्यांसाठी स्कूल बसची सुविधाही शाळेच्या संस्थेने पुरवली आहे –जे धावडशीसह आकले, माळेवाडी, कळंबे, किडगाव, नेले, पिंपळवाडी, गणेश मंदिर किडगाव, दत्तनगर, वर्ये आणि रामनगर यासारख्या गावांतून नियमित विद्यार्थ्यांना आणते-नेते.
+
+
+          
+            </p>
+            <p>
+                शाळा विविध शासकीय योजनांचा लाभ विद्यार्थ्यांपर्यंत पोहोचवते. येथील विद्यार्थी आज भारतीय सैन्य, नौदल, हवाई दल, पोलीस खाते, तसेच डॉक्टर, वकील, इंजिनिअर आणि सरकारी अधिकारी म्हणून देशभरात यशस्वीरीत्या कार्यरत आहेत.
+
+सांस्कृतिक कार्यक्रम, राष्ट्रीय सण, आणि २६ जानेवारीचा क्रीडा दिन –हे सर्व विद्यार्थ्यांमध्ये देशप्रेम, नेतृत्वगुण आणि सृजनशीलता विकसित करतात.
+
+पालकहो, आपल्या पाल्याचा उज्ज्वल भविष्य घडवायचं असेल, तर श्री ब्रह्मेंद्र स्वामी हायस्कूल, धावडशी हीच योग्य निवड आहे.
+एकदा जरूर भेट द्या… प्रवेश घ्या… आणि निश्चिंत राहा!
+
+कारण, ही फक्त शाळा नाही, ही आहे – संस्कारांची, गुणवत्ता शिक्षणाची आणि ग्रामीण भागातील तेजस्वी यशोगाथा!
+            </p>
+            <a href="about.html">back page</a>
+            
+        </div>
+    </div>
+</body>
+</html>

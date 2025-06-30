@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Modern Contact Page</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+    --primary-color:white;
+    --secondary-color:  #d4e5ec;
+    --accent-color: #ff8c00;
+    --light-color: white;
+    --dark-color: #212529;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --transition: all 0.3s ease;
+}
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #d4e5ec;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0a4f70;;
+            
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            color:white;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        p.subtitle {
+            color: #f1f1f1;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: slideInLeft 0.8s ease;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #032230 ,#0a4f70 );
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .info-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: var(--dark-color);
+        }
+        
+        .info-content p, .info-content a {
+            color: #0a4f70 ;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .info-content a:hover {
+            color:#0a4f70  ;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            color: #f7f2f2;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInLeft {
+            from { 
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .map-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shri Brahmendra Swami Highschool,Contact Information</h1>
+            <p class="subtitle">Feel free to reach out to us through any of these contacts we will happy to give the information about us!</p>
+        </header>
+        
+        <div class="contact-info">
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Email Us</h3>
+                    
+                    <a href="bshd1983@gmail.com">bshd1983@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Call Us</h3>
+                     <a href="tel:+919822057565">9822057565</a><br>
+                     <a href="tel:+919822672410">9822672410</a><br>
+                      <a href="tel:+917972877592">7972877592</a><br>
+                       <a href="tel:+918975702584">8975702584</a>
+
+
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Visit Us</h3>
+                    <p>Shri Brahmendra Swami Highschool,Dhawadshi A/p Dhawadshi,Tal & dist Satara.</p>
+                    <address>
+                       <br>
+                        <br>
+                       
+                    </address>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.7964618621795!2d73.9395512242183!3d17.754227042135533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2399337de9de3%3A0x507fc6c4554b17fd!2z4KS24KWN4KSw4KWALuCkrOCljeCksOCkueCljeCkruClh-CkqOCljeCkpuCljeCksOCkuOCljeCkteCkvuCkruClgCDgpLngpL7gpIjgpLjgpY3gpJXgpYLgpLIg4KSn4KS-4KS14KSh4KS24KWA4KWk!5e0!3m2!1sen!2sin!4v1750760317652!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 shri Brahmendra Swami highschool Dhawadshi. All rights reserved.</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

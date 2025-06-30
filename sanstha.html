@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanstha</title>
+    <style>
+        .hero {
+             background-color:#0a4f70;
+            color: white; 
+            text-align: left;
+            padding: 50px 50px;
+            font-family: Monopoly;
+            font-size: 150%;
+        }
+
+        .hero h1 {
+            color: white;
+        }
+
+        .hero a{
+     justify-content: center; 
+     margin-top: 10px; 
+     margin: 0; 
+    background-color:#e07b00 ; 
+    color: white;
+     padding: 12px 14px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:#d4e5ec; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .founders-section, .trustee-section, .members-section, .teachers-section, .main-section, .helpers-section, .main-founders-section{
+            padding: 3rem;
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        .trustee-grid, .members-grid, .teachers-grid, .helpers-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3.5rem;
+            margin-top: 2rem;
+        }
+
+        .founder-card, .trustee-card, .members-card, .teachers-card, .main-card, .helpers-card, .main-founders-card{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .founders-section, .trustee-section, .members-section, .teachers-section, .main-section, .helpers-section, .main-founders-section{
+            color:#0a4f70
+        }
+
+        .founder-img, .trustee-img, .teachers-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .founder-img:hover, .trustee-img:hover, .teachers-img:hover {
+            transform: scale(1.05);
+        }
+
+        .founder-name, .founder-title {
+            font-weight: 600;
+            margin-top: 1rem;
+            color: #0a4f70;;
+            text-align: center;
+            width: 100%;
+        }
+
+        .founder-title {
+            color: #0a4f70;;
+            font-size: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Main Section Styles (Our Teachers) */
+        .main-section, .main-founders-section{
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .main-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+        .main-founders-grid{
+             display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3.5rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+
+        .main-section, .main-founders-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .founders-grid{
+             display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+
+        .helpers h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color:#0a4f70 /* Optional: to maintain spacing consistency */
+}
+
+        /* Teachers Section Styles */
+        .teachers-section {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3.5rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+
+       .teachers-img {
+            width: 150px;  /* Made same size as other photos */
+            height: 150px;
+            object-fit: cover;  /* Changed from circle to square */
+            border: 4px solid white;  /* Consistent with other sections */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            /* Removed border-radius property */
+        }
+
+        .teachers-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .founders-grid, .trustee-grid, .members-grid, .teachers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .founders-grid, .trustee-grid, .members-grid, .teachers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .teachers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .founders-grid, .trustee-grid, .members-grid, .teachers-grid, .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="home" class="hero">
+        <h1>Shri Brahmendra Swami Sevamandal Dhawadshi</h1>
+        <p>Dhavdashi is a remote village in Satara district from Maharashtra state in India. The village is totally
+            dependent on agriculture with no sources of other income for villagers. Agriculture is also dependent 
+            only on seasonal rainwater with no irrigation facilities. Therefore, by and large, the villagers are
+            very poor. Brahmendraswami High School was established in 1983 on this background 
+            to provide school education to the needy and poor village students. Right from the beginning, 
+            the education in this school was imparted free of cost and that motto still remains very much
+            intact. The school gives education from 5th to 10th standard. The school has been helped by many benevolent 
+            donors across society. With the help of these donations, the school has its own two buildings. The school 
+            has its own playground. The school is run by a charitable trust 'Brahmendraswami Seva Mandal'. The school
+            imparts free education to the village 
+            students and the students from adjoining other villages. The school has 5th to 10th classrooms.</p>
+            <a href="contact.html">next page</a>
+    </section>
+
+    <section class="main-founders-section">
+        <h2> Founders</h2>
+         <div class="main-founders-grid">
+            <div class="main-founder-card">
+               <img src="../try/school/drp.jpeg" 
+                     alt="Founder 2" class="founder-img"/>
+                <div class="founder-name">कै.डॉ.विठ्ठलराव रामकृष्ण पेंढारकर</div>
+                <div class="founder-title">संस्थापक <br>
+                    <p>
+                        
+जन्म २४ जुलै,१९३१ - ७ मार्च २००७<br>
+धावडशीतील कार्य:<br>
+ १९७३ धावडशी गावी वीज,
+ १९७७ परशुराम मंदिर जीर्णोद्धार,
+१९८३ श्री ब्रहमेंद्रस्वामी हायस्कूल ची स्थापना,
+ १९८४ भागवत ट्रस्टच्या माध्यमातून बालवाडीची स्थापना,
+ १९८६ श्री ब्रहमेंद्रस्वामी पुस्तक प्रकाशन,
+ १९९० श्री ब्रहमेंद्रस्वामी सेवा मंडळाची स्थापना,
+२००१ पेंढारकर वाडा संस्थेस अर्पण,
+२००२ शाळेची नवीन इमारत बांधकाम पूर्ण.
+                    </p>
+                </div> 
+            </div>
+         </div>
+    </section>
+     
+    
+    
+    
+    
+    <section class="founders-section">
+        
+        <div class="founders-grid">
+             
+            <div class="founder-card">
+                <img src="../try/school/bsakhare.png" 
+                     alt="Founder 2" class="founder-img"/>
+                <div class="founder-name">कै.मा.श्री.बापूसाहेब साखरे</div>
+                <div class="founder-title">सह संस्थापक</div>
+            </div>
+            <div class="founder-card">
+                <img src="../try/school/jpawar.png" 
+                     alt="Founder 3" class="founder-img"/>
+                <div class="founder-name">कै.मा.श्री जगन्नाथ पवार आण्णा</div>
+                <div class="founder-title">संस्था उपाध्यक्ष</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trustee-section">
+        <h2>Trustee</h2>
+        <div class="trustee-grid">
+            <div class="trustee-card">
+                <img src="../try/school/ramchandrap.png" 
+                     alt="Trustee 1" class="trustee-img"/>
+                <div class="founder-name">मा.श्री रामचंद्र तुकाराम पवार</div>
+                <div class="founder-title">संस्थापक विश्वस्त</div>
+            </div>
+            <div class="trustee-card">
+                <img src="../try/school/balkrushnap.png" 
+                     alt="Trustee 2" class="trustee-img"/>
+                <div class="founder-name">मा .श्री बाळकृष्ण ज्योती पवार (पाटील)</div>
+                <div class="founder-title">संस्थापक विश्वस्त</div>
+            </div>
+            <div class="trustee-card">
+                <img src="../try/school/dharmajip.png" 
+                     alt="Trustee 3" class="trustee-img"/>
+                <div class="founder-name">मा .कै. धर्माजी पवार</div>
+                <div class="founder-title">संस्थापक विश्वस्त</div>
+            </div>
+            <div class="trustee-card">
+                <img src="../try/school/bajarangp.png" 
+                     alt="Trustee 4" class="trustee-img"/>
+                <div class="founder-name">मा कै .बजरंग पिलोबा पवार</div>
+                <div class="founder-title">संस्थापक विश्वस्त</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="members-section">
+        <h2> Members</h2>
+        <div class="members-grid">
+            <div class="members-card">
+                <img src="../try/school/doctor.jpeg" 
+                     alt="Member 1" class="founder-img"/>
+                <div class="founder-name">मा डॉ .गिरीशजी पेंढारकर</div>
+                <div class="founder-title">विश्वस्त</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/dilips.png" 
+                     alt="Member 2" class="founder-img"/>
+                <div class="founder-name">मा .श्री दिलीप शंकर साळुंखे</div>
+                <div class="founder-title">चेअरमन</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/prabhakarp.png" 
+                     alt="Member 3" class="founder-img"/>
+                <div class="founder-name">मा .श्री प्रभाकर पवार</div>
+                <div class="founder-title">सचिव</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/ganpatraop.png" 
+                     alt="Member 4" class="founder-img"/>
+                <div class="founder-name">मा. श्री गणपतराव पवार</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/dilipp.jpeg" 
+                     alt="Member 5" class="founder-img"/>
+                <div class="founder-name">मा.श्री.दिलीप पवार (बापु)</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/annasop.jpeg" 
+                     alt="Member 6" class="founder-img"/>
+                <div class="founder-name">मा श्रीअण्णासो पवार</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/sanjayp.png" 
+                     alt="Member 7" class="founder-img"/>
+                <div class="founder-name">मा.श्री. संजय पवार</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/dineshp.png" 
+                     alt="Member 8" class="founder-img"/>
+                <div class="founder-name">मा.श्री दिनेश पेंढारकर</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/bhikajip.png" 
+                     alt="Member 9" class="founder-img"/>
+                <div class="founder-name">मा. श्री भिकाजी पवार</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/maheshk.jpeg" 
+                     alt="Member 10" class="founder-img"/>
+                <div class="founder-name">मा .श्री. महेश कोकीळ</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/maske.jpeg" 
+                     alt="Member 11" class="founder-img"/>
+                <div class="founder-name">मा .श्री तानाजी दत्तू मस्के</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/ashokk.png" 
+                     alt="Member 12" class="founder-img"/>
+                <div class="founder-name">मा.श्री.अशोक विठोबा कापसे</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/shivaji.png" 
+                     alt="Member 13" class="founder-img"/>
+                <div class="founder-name">मा.श्री.शिवाजी ख. सपकाळ</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+            <div class="members-card">
+                <img src="../try/school/hiralalp.jpeg" 
+                     alt="Member 14" class="founder-img"/>
+                <div class="founder-name">मा.श्री हिरालाल पवार</div>
+                <div class="founder-title">संचालक</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section with 2 teacher photos -->
+    <section class="main-section">
+        <h2> Teachers</h2>
+        <div class="main-grid">
+            <div class="main-card">
+                <img src="../try/school/sunil.png" 
+                     alt="Teacher 1" class="teachers-img"/>
+                <div class="founder-name">मा. श्री सुनील ल. चौधरी</div>
+                <div class="founder-title">मुख्यध्यापक</div>
+            </div>
+            <div class="main-card">
+                <img src="../try/school/kamble.png" 
+                     alt="Teacher 2" class="teachers-img"/>
+                <div class="founder-name">श्री.काका दि. कांबळे</div>
+                <div class="founder-title">जेष्ठ शिक्षक</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section with 4 photos in one row (no heading) -->
+    <section class="teachers-section">
+        <div class="teachers-grid">
+            <div class="teachers-card">
+                <img src="../try/school/doiphode.png" 
+                     alt="Teacher 3" class="teachers-img"/>
+                <div class="founder-name">सौ.पूनम रा.डोईफोडे</div>
+                <div class="founder-title">शिक्षिका</div>
+            </div>
+            <div class="teachers-card">
+                <img src="../try/school/dikshit.png" 
+                     alt="Teacher 4" class="teachers-img"/>
+                <div class="founder-name">सौ.माधवी दीक्षित</div>
+                <div class="founder-title">शिक्षिका</div>
+            </div>
+            <div class="teachers-card">
+                <img src="../try/school/kore.png" 
+                     alt="Teacher 5" class="teachers-img"/>
+                <div class="founder-name">श्री शंकर र. कोरे</div>
+                <div class="founder-title">शिक्षक</div>
+            </div>
+            <div class="teachers-card">
+                <img src="../try/school/bakare.png" 
+                     alt="Teacher 6" class="teachers-img"/>
+                <div class="founder-name">सौ.प्रफुल्लता बकरे </div>
+                <div class="founder-title">शिक्षिका</div>
+            </div>
+
+             <div class="teachers-card">
+                <img src="../try/school/patil.png" 
+                     alt="Teacher 6" class="teachers-img"/>
+                <div class="founder-name">श्री वैभव पाटील </div>
+                <div class="founder-title">शिक्षक</div>
+             </div>
+
+             <div class="teachers-card">
+                <img src="../try/school/pawar.png" 
+                     alt="Teacher 6" class="teachers-img"/>
+                <div class="founder-name">श्री.अजित पवार </div>
+                <div class="founder-title">शिक्षक</div>
+            </div>
+        </div>
+    </section>
+
+     <section class="helpers">
+        <h2> Support Staf</h2>
+        <div class="helpers-grid">
+             <div class="helpers-card">
+                <img src="../try/school/bhandekar.png" 
+                     alt="Founder 1" class="founder-img"/>
+                <div class="founder-name">श्रीमती कविता भंडारे </div>
+                <div class="founder-title">लेखनिक </div>
+            </div>
+            <div class="helpers-card">
+                <img src="../try/school/yashwant.png" 
+                     alt="Founder 2" class="founder-img"/>
+                <div class="founder-name">श्री यशवंत दत्तू चव्हाण </div>
+                <div class="founder-title">नाईक </div>
+            </div>
+            <div class="helpers-card">
+                <img src="../try/school/sitaram.jpeg" 
+                     alt="Founder 3" class="founder-img"/>
+                <div class="founder-name">श्री सीताराम शं.पवार  </div>
+                <div class="founder-title">प्रयोगशाळा परिचर</div>
+            </div>
+             <div class="helpers-card">
+                <img src="../try/school/pradipm.jpeg" 
+                     alt="Founder 3" class="founder-img"/>
+                <div class="founder-name">श्री प्रदीप शा. मस्के </div>
+                <div class="founder-title"> शिपाई </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

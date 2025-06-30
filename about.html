@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:#d4e5ec; 
+            color: white;
+            font-family: "Lucida Console", "Courier New", monospace;
+              
+        }
+
+        .section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+           
+         
+         
+        }
+
+        .container {
+            width: 80%;
+            margin: 10%;
+            margin-top: 50%;
+            margin-bottom: 50%;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+             background-color:#0a4f70;
+             padding-left: 20px;
+             padding-right: 20px;
+             padding-bottom: 20px;
+             padding-top: 20px;
+              height: 90vh;
+
+        }
+
+        .content-section {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .image {
+            width: 45%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .image img {
+            width: 200%;
+            max-width: 450px; /* Adjust as needed */
+            height: 50vh;
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .content-section .title {
+            text-transform: uppercase;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color:  white;
+        }
+
+      
+
+        .content-section .content h3 {
+            margin-top: 10px;
+            line-height: 1.5;
+            color:white;
+             font-family: "Lucida Console", "Courier New", monospace;
+            padding: 2vh;
+        }
+
+        .content-section .content .button {
+            margin-top: 30px;
+        }
+
+        .content-section .content .button a {
+            background-color:  #ff8c00;
+            color:    white;
+            padding: 12px 14px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .content-section .content .button p{
+            color: white;
+            font-family: "Lucida Console", "Courier New", monospace;
+
+        }
+
+       .content p{
+              font-family: Monopoly;
+             font-size: 120%;
+
+        }
+
+        .button-next {
+            display: flex;
+            justify-content: center; /* Center the button */
+            margin-top: 10px; /* Add some space above */
+        }
+
+        .button-next .button {
+            margin: 0; /* Remove margin for the button */
+        }
+
+        .button-next .button a {
+            background-color: #0a4f70; /* Same as previous button */
+            color: white;
+            padding: 12px 14px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            border-radius: 5px; /* Add rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .button-next .button a:hover {
+            background-color: #e07b00; /* Darker shade on hover */
+        }
+           
+         @media (max-width: 768px) {
+            .section {
+                height: auto;
+                padding: 20px 0;
+            }
+            .container {
+                flex-direction: column;
+                width: 90%;
+                margin: 5%;
+                height: auto;
+                padding: 15px;
+            }
+            .content-section, .image {
+                width: 100%;
+            }
+            .image img {
+                width: 100%;
+                max-width: none;
+                height: auto;
+                margin-top: 20px;
+            }
+            .button-next {
+                margin-bottom: 20px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>"Where Learning Begins, Dreams Take Flight."</h3>
+                    <p>Shri Brahmendra Swami High School, Dhavdashi, nestled amidst the scenic Meruling hills, 
+                        stands as a beacon of quality education and rich values in rural Maharashtra. <br>
+                        Established in 1983 through the vision of 
+                        dedicated local leaders, the school has grown from humble beginnings to a modern institution with state-of-the-art facilities, 
+                        including smart classrooms, digital learning tools, and a fully solar-powered campus. With a strong focus on academics, 
+                        vocational training, sports, and cultural development, the school nurtures well-rounded individuals who go on to serve the nation with pride. 
+                        Parents seeking a holistic and future-ready education for their children will find Shri Brahmendra Swami High School 
+                        a truly inspiring choice.</p>
+                    <div class="button">
+                        <a href="history.html">Read Our History</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="image">
+                <img src="../try/school/bsh.jpeg" alt="School Image"/>
+            </div>
+             
+        </div>
+        
+    </div>
+
+    <div class="button-next">
+             <div class="button">
+                        <a href="activities.html">Next page</a>
+                    </div>
+        </div>
+</body>
+</html>
