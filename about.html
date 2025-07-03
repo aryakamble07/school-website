@@ -11,11 +11,10 @@
             font-family: Montserrat, sans-serif;
             box-sizing: border-box;
         }
-        body{
-            background-color:#d4e5ec; 
+        body {
+            background-color: #d4e5ec; 
             color: white;
             font-family: "Lucida Console", "Courier New", monospace;
-              
         }
 
         .section {
@@ -23,28 +22,17 @@
             height: 100vh;
             display: flex;
             align-items: center;
-           
-         
-         
         }
 
         .container {
             width: 80%;
             margin: 10%;
-            margin-top: 50%;
-            margin-bottom: 50%;
-            margin-left: 10%;
-            margin-right: 10%;
             display: flex;
             flex-direction: row;
             align-items: center;
-             background-color:#0a4f70;
-             padding-left: 20px;
-             padding-right: 20px;
-             padding-bottom: 20px;
-             padding-top: 20px;
-              height: 90vh;
-
+            background-color: #0a4f70;
+            padding: 20px;
+            height: auto; /* Change to auto for better responsiveness */
         }
 
         .content-section {
@@ -59,26 +47,24 @@
         }
 
         .image img {
-            width: 200%;
+            width: 100%; /* Change to 100% for better responsiveness */
             max-width: 450px; /* Adjust as needed */
-            height: 50vh;
-             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            height: auto; /* Change to auto for better responsiveness */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .content-section .title {
             text-transform: uppercase;
             font-size: 28px;
             margin-bottom: 20px;
-            color:  white;
+            color: white;
         }
-
-      
 
         .content-section .content h3 {
             margin-top: 10px;
             line-height: 1.5;
-            color:white;
-             font-family: "Lucida Console", "Courier New", monospace;
+            color: white;
+            font-family: "Lucida Console", "Courier New", monospace;
             padding: 2vh;
         }
 
@@ -87,29 +73,28 @@
         }
 
         .content-section .content .button a {
-            background-color:  #ff8c00;
-            color:    white;
+            background-color: #ff8c00;
+            color: white;
             padding: 12px 14px;
             text-decoration: none;
             letter-spacing: 1.5px;
         }
 
-        .content-section .content .button p{
+        .content-section .content .button p {
             color: white;
             font-family: "Lucida Console", "Courier New", monospace;
-
         }
 
-       .content p{
-              font-family: Monopoly;
-             font-size: 120%;
-
+        .content p {
+            font-family: Monopoly;
+            font-size: 120%;
         }
 
         .button-next {
             display: flex;
-            justify-content: center; /* Center the button */
-            margin-top: 10px; /* Add some space above */
+            justify-content: center;
+            margin: 20px auto;
+            padding-bottom: 30px;
         }
 
         .button-next .button {
@@ -117,45 +102,72 @@
         }
 
         .button-next .button a {
-            background-color: #0a4f70; /* Same as previous button */
+            background-color: #ff8c00; /* Match orange color of other button */
             color: white;
-            padding: 12px 14px;
+            padding: 12px 24px;
             text-decoration: none;
             letter-spacing: 1.5px;
-            border-radius: 5px; /* Add rounded corners */
-            transition: background-color 0.3s; /* Smooth transition */
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+            display: inline-block;
         }
 
         .button-next .button a:hover {
-            background-color: #e07b00; /* Darker shade on hover */
+            background-color: #e07b00;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-           
-         @media (max-width: 768px) {
-            .section {
-                height: auto;
-                padding: 20px 0;
-            }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
             .container {
-                flex-direction: column;
-                width: 90%;
-                margin: 5%;
-                height: auto;
-                padding: 15px;
+                flex-direction: column; /* Stack elements vertically */
+                margin: 5%; /* Adjust margin for smaller screens */
             }
+
             .content-section, .image {
-                width: 100%;
+                width: 100%; /* Full width for both sections */
+                padding: 0; /* Remove padding */
             }
+
+            .image {
+                justify-content: center; /* Center the image */
+                margin-top: 20px; /* Add space above the image */
+            }
+
             .image img {
-                width: 100%;
-                max-width: none;
-                height: auto;
-                margin-top: 20px;
+                max-width: 100%; /* Ensure image fits within the container */
+                height: auto; /* Maintain aspect ratio */
             }
-            .button-next {
-                margin-bottom: 20px;
+
+            .content-section .title {
+                font-size: 24px; /* Smaller title for mobile */
+            }
+
+            .content-section .content h3 {
+                font-size: 18px; /* Smaller subtitle for mobile */
             }
         }
-       
+
+        @media (max-width: 480px) {
+            .content-section .title {
+                font-size: 20px;
+            }
+
+            .content-section .content h3 {
+                font-size: 16px;
+            }
+
+            .content p {
+                font-size: 100%;
+            }
+            
+            .button-next .button a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -178,21 +190,18 @@
                     <div class="button">
                         <a href="history.html">Read Our History</a>
                     </div>
-                    
                 </div>
             </div>
             <div class="image">
                 <img src="images/bsh.jpeg" alt="School Image"/>
             </div>
-             
         </div>
-        
     </div>
 
     <div class="button-next">
-             <div class="button">
-                        <a href="activities.html">Next page</a>
-                    </div>
+        <div class="button">
+            <a href="activities.html">Next page</a>
         </div>
+    </div>
 </body>
 </html>
