@@ -2,154 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>facilities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+    <style>
+        body {
+            background-color: #d4e5ec; 
+        }
+        .hero {
+            background-color: #0a4f70;
+            color: white; 
+            text-align: left;
+            padding: 80px 80px;
+            font-family: Monopoly;
+            font-size: 150%;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .button a {
+            background-color: #e07b00; 
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+        }
+
+        .button a:hover {
+            background-color: #d68a00; /* Darker shade on hover */
+        }
+
+        #products {
+            padding: 10px;
+            color: #0a4f70;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+            gap: 60px; /* Space between items */
+        }
+
+        .product-card {
+            border: 4px solid #0a4f70;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            color: #0a4f70; 
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+                gap: 40px; /* Adjust gap for smaller screens */
+            }
+
+            .hero {
+                padding: 50px 30px; /* Adjust padding for smaller screens */
+                font-size: 120%; /* Smaller font size for hero section */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr; /* 1 column for mobile */
+                gap: 20px; /* Adjust gap for mobile */
+            }
+
+            .hero {
+                padding: 30px 20px; /* Further adjust padding for mobile */
+                font-size: 100%; /* Further reduce font size for hero section */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button a {
+                padding: 10px 15px; /* Adjust button padding for mobile */
+                font-size: 14px; /* Smaller font size for button */
+            }
+        }
+    </style>
 </head>
 <body>
-   <style>
-    body{
-    background-color:#d4e5ec; 
-        
-    }
-    .hero {
-    background-color:#0a4f70;
-    color: white; 
-    text-align: left;
-    padding: 80px 80px;
-    font-family: Monopoly;
-    font-size: 150%;
-}
-
-.hero a{
-     justify-content: center; 
-     margin-top: 10px; 
-     margin: 0; 
-    background-color:#e07b00 ; 
-    color: white;
-     padding: 12px 14px;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    border-radius: 5px; 
-    transition: background-color 0.3s;
-}
-
-#products {
-    padding: 10px;
-    color: #0a4f70;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create 3 equal columns */
-    gap: 60px; /* Space between items */
-}
-
-.product-card {
-    border: 6px solid #0a4f70;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    color:#0a4f70;; 
-}
-
-.product-card img {
-    max-width: 100%;
-    height: 80%;
-}
-</style>
-<body>
     <section id="home" class="hero">
-        <h1>our facilities</h1>
+        <h1>Our Facilities</h1>
         <p>Adequate school facilities create a comfortable, safe, and engaging learning environment that 
-            supports student well-being, enhances academic performance, and fosters social development.  </p>
-            <a href="sanstha.html">next page</a>
-        </section>
-      
+            supports student well-being, enhances academic performance, and fosters social development.</p>
+    </section>
 
- <section id="products">
-        <h2>OUR FACILITIES </h2>
+    <section id="products">
+        <h2>OUR FACILITIES</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="images/wr.JPG" alt="fresh washroom"/>
-                <h3>fresh amd clean washroom</h3>
-               
+                <img src="images/wr.JPG" alt="Fresh Washroom"/>
+                <h3>Fresh and Clean Washroom</h3>
             </div>
             <div class="product-card">
-                <img src="images/tank.JPG" alt="fresh drinking water"/>
-                <h3>clean drinking water</h3>
-               
+                <img src="images/tank.JPG" alt="Fresh Drinking Water"/>
+                <h3>Clean Drinking Water</h3>
             </div>
             <div class="product-card">
-                <img src="images/coml.JPG" alt="computer lab"/>
-                <h3>computer lab with Internet </h3>
-               
+                <img src="images/coml.JPG" alt="Computer Lab"/>
+                <h3>Computer Lab with Internet</h3>
             </div>
             <div class="product-card">
-                <img src="images/eboard.JPG" alt="E-barod"/>
+                <img src="images/eboard.JPG" alt="E-board"/>
                 <h3>E-board</h3>
-                
             </div>
             <div class="product-card">
-                <img src="images/ebclass.JPG" alt="E-barod"/>
-                <h3>E-barod classroom </h3>
-                
+                <img src="images/ebclass.JPG" alt="E-board Classroom"/>
+                <h3>E-board Classroom</h3>
             </div>
             <div class="product-card">
-                <img src="images/ictclass.JPG" alt=" ICT lab"/>
-                <h3> ICT lab</h3>
-               
+                <img src="images/ictclass.JPG" alt="ICT Lab"/>
+                <h3>ICT Lab</h3>
             </div>
             <div class="product-card">
-                <img src="images/esclass.JPG" alt="ict lab"/>
-                <h3>spoken English classes </h3>
-                
+                <img src="images/esclass.JPG" alt="Spoken English Classes"/>
+                <h3>Spoken English Classes</h3>
             </div>
             <div class="product-card">
-                <img src="images/cctv.JPG" alt="cctv"/>
-                <h3>CCTV </h3>
-                
+                <img src="images/cctv.JPG" alt="CCTV"/>
+                <h3>CCTV</h3>
             </div>
             <div class="product-card">
-                <img src="images/lab.JPG" alt="Librari"/>
-                <h3>Libray</h3>
-                
+                <img src="images/lab.JPG" alt="Library"/>
+                <h3>Library</h3>
             </div>
-
             <div class="product-card">
-                <img src="images/traning.jpeg" alt="Basic"/>
-                <h3>Basic Industrial Traning</h3>
-                
+                <img src="images/traning.jpeg" alt="Basic Industrial Training"/>
+                <h3>Basic Industrial Training</h3>
             </div>
-
             <div class="product-card">
-                <img src="images/bus.jpeg" alt="schoolbus"/>
+                <img src="images/bus.jpeg" alt="School Bus"/>
                 <h3>School Bus</h3>
-                
             </div>
-
-             <div class="product-card">
-                <img src="images/garden.jpeg" alt="gardening"/>
+            <div class="product-card">
+                <img src="images/garden.jpeg" alt="Vegetable Garden"/>
                 <h3>Vegetable Garden</h3>
-                
             </div>
-
             <div class="product-card">
-                <img src="images/aqua.jpeg" alt="water"/>
-                <h3>water purifier</h3>
-                
+                <img src="images/aqua.jpeg" alt="Water Purifier"/>
+                <h3>Water Purifier</h3>
             </div>
-
             <div class="product-card">
-                <img src="images/solar.jpeg" alt="solar"/>
-                <h3>solar panel</h3>
-
-
-             </div>
-            
-
-
+                <img src="images/solar.jpeg" alt="Solar Panel"/>
+                <h3>Solar Panel</h3>
+            </div>
         </div>
     </section>
-</body>
-</html> 
 
+    <div class="button">
+        <a href="sanstha.html">Next Page</a>
+    </div>
+</body>
+</html>
