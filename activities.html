@@ -57,6 +57,38 @@
     max-width: 100%;
     height: auto;
 }
+
+     /* Media Queries */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+                gap: 40px; /* Adjust gap for smaller screens */
+            }
+
+            .hero {
+                padding: 50px 30px; /* Adjust padding for smaller screens */
+                font-size: 120%; /* Smaller font size for hero section */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr; /* 1 column for mobile */
+                gap: 20px; /* Adjust gap for mobile */
+            }
+
+            .hero {
+                padding: 30px 20px; /* Further adjust padding for mobile */
+                font-size: 100%; /* Further reduce font size for hero section */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button a {
+                padding: 10px 15px; /* Adjust button padding for mobile */
+                font-size: 14px; /* Smaller font size for button */
+            }
+        }
 </style>
 <body>
     <section id="home" class="hero">
