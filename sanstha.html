@@ -167,25 +167,42 @@
             transform: scale(1.05);
         }
 
-        /* Responsive adjustments */
+      
+        /* Media Queries for Responsive Design */
         @media (max-width: 1200px) {
-            .founders-grid, .trustee-grid, .members-grid, .teachers-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .trustee-grid, .members-grid, .teachers-grid, .helpers-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 900px) {
-            .founders-grid, .trustee-grid, .members-grid, .teachers-grid {
+            .trustee-grid, .members-grid, .teachers-grid, .helpers-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .teachers-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+            .main-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .founders-grid {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
 
         @media (max-width: 600px) {
-            .founders-grid, .trustee-grid, .members-grid, .teachers-grid, .main-grid {
-                grid-template-columns: 1fr;
+            .hero {
+                padding: 30px 20px;
+                font-size: 120%;
+            }
+
+            .button a {
+                padding: 10px 20px;
+                font-size: 90%;
+            }
+
+            .founder-img, .trustee-img, .teachers-img {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -440,7 +457,7 @@
     </section>
 
      <section class="helpers">
-        <h2> Support Staf</h2>
+        <h2> Support Staff</h2>
         <div class="helpers-grid">
              <div class="helpers-card">
                 <img src="images/bhandekar.png" 
